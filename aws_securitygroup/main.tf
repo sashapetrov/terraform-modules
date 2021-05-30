@@ -2,7 +2,7 @@
 
 resource "aws_security_group" "network_sg" {
   name        = "network_sg"
-  description = "Network security_group for ports: ${var.port_list[*]}"
+  description = "Network security_group for ports"
   dynamic "ingress" {
     for_each = var.port_list
     content {
