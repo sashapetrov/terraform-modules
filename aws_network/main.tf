@@ -75,7 +75,7 @@ resource "aws_subnet" "private_subnet" {
 resource "aws_eip" "nat_ip" {
   count = length(var.private_cidrs)
   tags = {
-    Name = "${var.env} IP addres for NGW in ${data.aws_availability_zones.available.names[count.index]} "
+    Name = "${var.env} IP address for NGW in ${data.aws_availability_zones.available.names[count.index]} "
   }
 }
 
